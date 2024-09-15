@@ -56,6 +56,7 @@ resource "aws_iam_role_policy_attachment" "lambda_create_logs_policy_attachment"
   role       = aws_iam_role.udacity_iam_for_lambda.name
   policy_arn = aws_iam_policy.create_logs_policy.arn
 }
+
 # ------------------ 3.Function
 data "archive_file" "lambda" {
   	type        = "zip"
